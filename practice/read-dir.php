@@ -8,4 +8,4 @@
 
 echo file_exists("./data.txt");
 
-echo is_dir("./storage");
+//echo is_dir("./storage");
