@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DemoController;
 use App\Http\Controllers\PersonController;
+use App\Http\Middleware\DemoMiddleware;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,3 +28,20 @@ Route::get('/Demo5', [DemoController::class, "Demo5"]);
 Route::get('/Demo6', [DemoController::class, "Demo6"]);
 Route::get('/Demo7', [DemoController::class, "Demo7"]);
 Route::get('/Demo8', [DemoController::class, "Demo8"]);
+Route::get('/Demo9', [DemoController::class, "Demo9"]);
+Route::get('/Demo10', [DemoController::class, "Demo10"]);
+
+
+Route::get('/SessionPut/{email}', [DemoController::class, 'SessionPut']);
+
+Route::get('/SessionPull', [DemoController::class, 'SessionPull']);
+
+Route::get('/essionForget', [DemoController::class, 'essionForget']);
+
+Route::get('/SessionFlash', [DemoController::class, 'SessionFlash']);
+
+Route::get('/SessionGet', [DemoController::class, 'SessionGet']);
+
+
+
+Route::get('/hello', [DemoController::class, 'DemoAction'])->middleware([DemoMiddleware::class]);
