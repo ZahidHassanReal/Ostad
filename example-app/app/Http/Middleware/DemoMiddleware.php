@@ -15,6 +15,15 @@ class DemoMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
+
+        $key= $request->header(key:'API-KEY');
+        if($key=="XYZ123"){
         return $next($request);
     }
+    else {
+        return response()->json(data:'unauthorized', status:401);
+    }
+}
+
+
 }

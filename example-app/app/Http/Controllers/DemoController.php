@@ -125,4 +125,10 @@ class DemoController extends Controller
          return " Sorry drubo";
     }
 
+
+
+        function DemoAction2():string
+    {
+         return " Sorry please drubo ";
+    }
 }

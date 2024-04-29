@@ -44,4 +44,7 @@ Route::get('/SessionGet', [DemoController::class, 'SessionGet']);
 
 
 
-Route::get('/hello', [DemoController::class, 'DemoAction'])->middleware([DemoMiddleware::class]);
+Route::get('/hello1', [DemoController::class, 'DemoAction'])->middleware([DemoMiddleware::class]);
+
+
+Route::get('/hello2', [DemoController::class, 'DemoAction2']);
