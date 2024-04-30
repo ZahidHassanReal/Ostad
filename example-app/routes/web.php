@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DemoController;
 use App\Http\Controllers\PersonController;
+use App\Http\Controllers\VIDEOController;
 use App\Http\Middleware\DemoMiddleware;
 use Illuminate\Support\Facades\Route;
 
@@ -44,7 +45,24 @@ Route::get('/SessionGet', [DemoController::class, 'SessionGet']);
 
 
 
-Route::get('/hello1', [DemoController::class, 'DemoAction'])->middleware([DemoMiddleware::class]);
+Route::get('/hell/{key}', [DemoController::class, 'DemoAction'])->middleware([DemoMiddleware::class]);
 
 
-Route::get('/hello2', [DemoController::class, 'DemoAction2']);
+Route::get('/hell', [DemoController::class, 'DemoAction2']);
+
+
+// Route::middleware(['demo'])->group(function ()
+// {
+
+// });
+
+
+    Route::get('/hello1/{key}', [DemoController::class, 'DemoAction1'])->middleware(middleware:'throttle:4,1');
+    Route::get('/hello2/{key}', [DemoController::class, 'DemoAction2']);
+    Route::get('/hello3/{key}', [DemoController::class, 'DemoAction3']);
+    Route::get('/hello4/{key}', [DemoController::class, 'DemoAction4']);
+
+
+
+
+    Route::resource('users', VIDEOController::class);

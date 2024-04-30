@@ -120,15 +120,21 @@ class DemoController extends Controller
 // }
 
 
-    function DemoAction():string
+    function DemoAction1():string
     {
          return " Sorry drubo";
     }
-
-
-
         function DemoAction2():string
     {
          return " Sorry please drubo ";
+    }
+            function DemoAction3():string
+    {
+         return " i love u drubo ";
+    }
+
+            function DemoAction4():string
+    {
+         return " i love u ";
     }
 }
